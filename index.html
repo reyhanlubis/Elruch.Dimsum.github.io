@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elruch Dimsum</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+<style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: red;
+        text-align: center;
+      }
+      .menu-item {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        background-color: #222;
+      }
+      .dish-item {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+      }
+      .dish-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-right: 15px;
+      }
+      .dish-info {
+        flex-grow: 1;
+      }
+      .dish-price {
+        color: red;
+        font-weight: bold;
+        margin-left: 15px;
+      }
+      .buy-button {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .buy-button:hover {
+        background-color: darkred;
+      }
+
+       .beli-button {
+  margin-top: 0rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #bb0000;
+  cursor: pointer;
+  padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+        .beli-button:hover {
+            background-color: #e63946; /* Merah lebih gelap saat hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .beli-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+
+         .beli-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+
+    </style>
+    
+  </head>
+  <body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Ekruch<span>Dimsum</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="menu.html">Menu</a>
+        <a href="kontak.html">Kontak Kami</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"> <i data-feather="search"></i></a>
+        <a href="#" id="shopping-bag"> <i data-feather="shopping-bag"></i></a>
+        <a href="#" id="slack"> <i data-feather="slack"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero Section start -->
+     <section class="hero" id="home">
+        <main class="content">
+            <h1>Nikmati<span>
+              Dimsumnya</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, mollitia.</p>
+            <a href="#" class="btn"></a>
+        </main>
+     </section>
+    </form>
+
+    <button class="beli-button">
+        Beli Sekarang
+    </button>
+    
+    <script>
+        document.querySelector('.beli-button').addEventListener('click', function() {
+            alert('Silahkan daftarkan diri anda terlebih dahulu!');
+        });
+        </script>
+    <!-- Hero Section end -->
+     
+    <!-- About Section start -->
+    <section id="about" class="about">
+      <h2>Tentang<span> Kami</h2>
+        
+        <div class="row">
+          <div class="about-img">
+            <img src="img/pooja-chaudhary-q66grqqHpDQ-unsplash.jpg" alt="Tentang Kami">
+          </div>
+          <div class="content">
+            <h3>Kenapa memilih dimsum kami?</h3>
+            <p>Sejarah dimsum membentang panjang, berakar dari tradisi "yam cha" di Tiongkok Selatan, di mana para pelancong dan pedagang menikmati teh bersama kudapan kecil. Dari kedai teh sederhana, dimsum berevolusi menjadi seni kuliner yang kita kenal sekarang. Setiap adonan yang dibentuk, setiap isian yang diracik, adalah penghormatan pada tradisi berusia berabad-abad, sebuah cerita yang diceritakan ulang di setiap piring saji.</p>
+            <p>Salah satu daya tarik utama dimsum terletak pada keindahan dalam kesederhanaannya. Bentuknya yang mungil, disajikan dalam keranjang bambu kukus, memancarkan pesona yang tak lekang oleh waktu. Kesederhanaan ini justru menyembunyikan kompleksitas rasa yang luar biasa, hasil dari bahan-bahan segar dan teknik memasak yang presisi.</p>
+          </div>
+        </div>
+      </section>
+      <!-- About Section end -->
+      
+      <!-- Menu Section start -->
+      <section id="menu" class="menu">
+    </div>
+    <div class="menu">
+      <h2>Menu<span>Kami</span></h2>
+      <form id="menu" action="#" method="post">
+      </form>
+    </div>
+
+
+    <div class="menu-item">
+      <h2>Dimsum Kukus</h2>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/17732a2c-2099-44a2-bf0f-1fea6519bb49.png"
+          alt="Siomay"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Siomay:</strong> Terbuat dari daging ayam atau udang yang
+          dibungkus kulit tipis, biasanya dikukus hingga matang.
+        </div>
+        <div class="dish-price">Rp 25,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/58e2bac7-52c0-41bc-9fd0-fd4cb8348f46.png"
+          alt="Hakau"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Hakau:</strong> Dimsum berbentuk bulan sabit dengan isian
+          udang, dibungkus kulit tipis dari tepung beras.
+        </div>
+        <div class="dish-price">Rp 30,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1bbe7b6d-08ec-40e6-945d-58960546cff6.png"
+          alt="Bakpao"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Bakpao:</strong> Roti kukus dengan berbagai isian, seperti
+          daging cincang, kacang hijau, atau selai.
+        </div>
+        <div class="dish-price">Rp 15,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2f67bfb5-8735-4dab-9c7a-7ddab9d3292d.png"
+          alt="Cheong Fun"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Cheong Fun:</strong> Lembaran tipis adonan beras yang digulung
+          dan diisi berbagai bahan, seperti udang, daging, atau sayuran.
+        </div>
+        <div class="dish-price">Rp 35,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e10b33ef-6793-4d02-9361-6a7b5014c926.png"
+          alt="Wonton"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Wonton:</strong> Pangsit dengan isian daging atau udang, bisa
+          disajikan dengan kuah atau digoreng.
+        </div>
+        <div class="dish-price">Rp 20,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e77940ec-1fdd-4cc9-af9b-820c0ec45a2f.png"
+          alt="Xiao Long Bao"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Xiao Long Bao:</strong> Pangsit berkuah dengan isian daging
+          dan kaldu, biasanya dikukus.
+        </div>
+        <div class="dish-price">Rp 40,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/37f0517c-fb05-4a51-92ac-d7ac61def96c.png"
+          alt="Ceker Ayam Angsio"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Ceker Ayam Angsio:</strong> Ceker ayam yang dimasak dengan
+          bumbu angsio, menghasilkan rasa gurih dan kaya rempah.
+        </div>
+        <div class="dish-price">Rp 18,000</div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <h2>Dimsum Goreng</h2>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d94cb2f9-df67-45bc-ad1f-f77b05d42abe.png"
+          alt="Lumpia"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Lumpia:</strong> Adonan kulit lumpia berisi sayuran, daging,
+          atau udang, kemudian digoreng hingga renyah.
+        </div>
+        <div class="dish-price">Rp 22,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2283fef6-c5d0-47ac-990a-115d08827867.png"
+          alt="Pangsit Goreng"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Pangsit Goreng:</strong> Pangsit yang digoreng hingga kering,
+          biasanya disajikan dengan saus.
+        </div>
+        <div class="dish-price">Rp 18,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8d412d2e-59db-438f-a9a5-54f53a20fa9a.png"
+          alt="Lumpia Kulit Tahu"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Lumpia Kulit Tahu:</strong> Lumpia yang dibungkus kulit tahu,
+          kemudian digoreng.
+        </div>
+        <div class="dish-price">Rp 20,000</div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <h2>Dimsum Lainnya</h2>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/945d2587-5324-447d-a997-42b58f3c5e72.png"
+          alt="Fung Jau"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Fung Jau (Ceker Ayam):</strong> Ceker ayam yang dimasak dengan
+          bumbu, seringkali digoreng atau dikukus.
+        </div>
+        <div class="dish-price">Rp 25,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c701b79-2e40-4fb6-821d-4b52d4dc0c5b.png"
+          alt="Pai Gow"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Pai Gow:</strong> Pangsit udang yang disajikan dengan bentuk
+          unik.
+        </div>
+        <div class="dish-price">Rp 30,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4ea72c7f-e325-4919-a85f-cb9aeaa0c982.png"
+          alt="Lo Mai Gai"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Lo Mai Gai:</strong> Dimsum yang dibungkus daun bambu dan
+          dikukus.
+        </div>
+        <div class="dish-price">Rp 35,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/25dddc5e-b570-4f9a-ad7f-149b6cfb66cd.png"
+          alt="Char Siu Bao"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Char Siu Bao:</strong> Bakpao dengan isian daging babi
+          panggang manis.
+        </div>
+        <div class="dish-price">Rp 20,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/228c070f-132f-4482-a6ac-c249e37c2323.png"
+          alt="Liu Sha Bao"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Liu Sha Bao:</strong> Bakpao dengan isian krim telur asin.
+        </div>
+        <div class="dish-price">Rp 25,000</div>
+      </div>
+      <div class="dish-item">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b9d5e4fa-8aa5-4ba2-9f6f-fffe668b5b1d.png"
+          alt="Dimsum Mentai"
+          class="dish-img"
+        />
+        <div class="dish-info">
+          <strong>Dimsum Mentai:</strong> Varian dimsum dengan saus mentai yang
+          sedang populer.
+        </div>
+        <div class="dish-price">Rp 38,000</div>
+      </div>
+    </div>
+ <!-- Menu Section end -->
+
+          <!-- Contact Section start -->
+<div class="menu-item" style="margin-top: 50px;">
+        <h2 style="color: red;">Daftar sebagai member Kami</h2>
+        <form>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="padding: 10px; text-align: right;"><label for="nama">Nama Lengkap:</label></td>
+                    <td style="padding: 10px;"><input type="text" id="nama" style="width: 100%; padding: 8px; background-color: #333; color: white; border: 1px solid red;"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; text-align: right;"><label for="email">Email:</label></td>
+                    <td style="padding: 10px;"><input type="email" id="email" style="width: 100%; padding: 8px; background-color: #333; color: white; border: 1px solid red;"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; text-align: right;"><label for="password">Password:</label></td>
+                    <td style="padding: 10px;"><input type="password" id="password" style="width: 100%; padding: 8px; background-color: #333; color: white; border: 1px solid red;"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; text-align: right;"><label for="confirm">Konfirmasi Password:</label></td>
+                    <td style="padding: 10px;"><input type="password" id="confirm" style="width: 100%; padding: 8px; background-color: #333; color: white; border: 1px solid red;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding: 20px;">
+                        <button class="buy-button" type="submit" style="width: 200px;" color: white;>
+                          <li style="padding: 10px 0">
+          <a href="login.html" style="color: white; text-decoration: none">Daftar
+          </a>
+          </button>
+        </li>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="#" style="color: white; text-decoration: none;">Lupa sandi?</a>
+            <button class="buy-button" style="background-color: #222; border: 1px solid red; margin-left: 20px;">
+            <li style="padding: 0px 0">
+          <a href="login.html" style="color: white; text-decoration: none">Login
+
+          </a>
+          </button>
+        </li>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.dish-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const dishName = this.querySelector('strong').textContent;
+                const price = this.querySelector('.dish-price').textContent;
+                showPaymentOptions(dishName, price);
+            });
+        });
+
+        function showPaymentOptions(dishName = 'Dimsum', price = '') {
+            alert(`Anda akan membeli ${dishName} seharga ${price}\nPilih metode pembayaran:\n1. Transfer Bank\n2. E-Wallet\n3. COD`);
+        }
+    </script>
+<!--  -->
+          <!-- footer start -->
+<footer>
+  <div class="socials">
+    <a href="#"><i data-feather="instagram"></i></a>
+    <a href="#"><i data-feather="twitter"></i></a>
+    <a href="#"><i data-feather="facebook"></i></a>
+  </div>
+
+  <div class="links">
+    <a href="#home">Home</a>
+    <a href="#about">Tentang Kami</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Kontak</a>
+  </div>
+
+  <div class="credit">
+    <p>Created by <a href="">Annas Al-qodri</a>. | &copy; 2025.</p>
+  </div>
+</footer>
+          <!-- footer end -->
+          
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascrip -->
+     <script src="js/scrip.js"></script>
+
+
+  </body>
+</html>

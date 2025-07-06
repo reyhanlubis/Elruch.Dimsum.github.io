@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+<!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        margin-top: 5rem;
+      }
+      h1 {
+        color: red;
+        text-align: center;
+      }
+      .menu-item {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        background-color: #222;
+      }
+      .dish-item {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+      }
+      .dish-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-right: 15px;
+      }
+      .dish-info {
+        flex-grow: 1;
+      }
+      .dish-price {
+        color: red;
+        font-weight: bold;
+        margin-left: 15px;
+      }
+      .buy-button {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .buy-button:hover {
+        background-color: darkred;
+      }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  background-color: rgb(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1266px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+     <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Ekruch<span>Dimsum</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="menu.html">Menu</a>
+        <a href="kontak.html">Kontak Kami</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"> <i data-feather="search"></i></a>
+        <a href="#" id="shopping-bag"> <i data-feather="shopping-bag"></i></a>
+        <a href="#" id="slack"> <i data-feather="slack"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+     <!-- Contact Section start -->
+<div class="menu-item" style="margin-top: 50px;">
+        <h2 style="color: red;">Masuk Ke akun Anda</h2>
+        <form>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="padding: 0px; text-align: right;"><label for="nama">Nama Lengkap:</label></td>
+                    <td style="padding: 10px;"><input type="text" id="nama" style="width: 100%; padding: 8px; background-color: #333; color: white; border: 1px solid red;"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px; text-align: right;"><label for="password">Password:</label></td>
+                    <td style="padding: 10px;"><input type="password" id="password" style="width: 100%; padding: 8px; background-color: #333; color: white; border: 1px solid red;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding: 10px;">
+                        <button class="buy-button" type="submit" style="width: 200px;">
+                           <li style="padding: 0px 0">
+          <a href="beranda.html" style="color: white; text-decoration: none">Login
+          </a>
+          </button>
+        </li>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align: center; margin-top: 1px;">
+            <a href="#" style="color: white; text-decoration: none;">Lupa sandi?</a>
+        </div>
+    </div>
+
+          <!-- Contact Section end -->
+
+          <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dimsum</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        .menu-item {
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #222;
+        }
+        .dish-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .dish-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .dish-info {
+            flex-grow: 1;
+        }
+        .dish-price {
+            color: red;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .buy-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .buy-button:hover {
+            background-color: darkred;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: white !important;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+   
+    </script>
+     <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascrip -->
+     <script src="js/scrip.js"></script>
+
+  </body>
+</html>

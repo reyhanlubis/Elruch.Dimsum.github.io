@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Pembayaran</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #222;
+            padding: 50px;
+            border-radius: 5px;
+            border: 1px solid red;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+        .submit-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-button:hover {
+            background-color: darkred;
+        }
+
+        .side-menu-overlay {
+        transition: opacity 0.3s;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: red;
+        text-align: center;
+      }
+      .menu-item {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        background-color: #222;
+      }
+      .dish-item {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+      }
+      .dish-info {
+        flex-grow: 1;
+      }
+      .dish-price {
+        color: red;
+        font-weight: bold;
+        margin-left: 15px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: white !important;
+      }
+
+      .side-menu-overlay {
+        transition: opacity 0.3s;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: red;
+        text-align: center;
+      }
+      .menu-item {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        background-color: #222;
+      }
+      .dish-item {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+      }
+      .dish-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-right: 15px;
+      }
+      .dish-info {
+        flex-grow: 1;
+      }
+      .dish-price {
+        color: red;
+        font-weight: bold;
+        margin-left: 15px;
+      }
+      .buy-button {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .buy-button:hover {
+        background-color: darkred;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: white !important;
+      }
+    </style>
+
+    </style>
+</head>
+<body>
+    <div
+      class="navbar"
+      style="
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #111;
+        border-bottom: 1px solid red;
+      "
+    >
+    
+    <button
+        class="menu-toggle"
+        style="background: none; border: none; color: white; font-size: 24px"
+      >
+        ☰
+      </button>
+      <div style="display: flex; gap: 20px">
+        <div class="search-box" style="position: relative">
+          <input
+            type="text"
+            placeholder="Cari menu..."
+            style="
+              padding: 8px 15px;
+              background: #333;
+              border: 1px solid red;
+              color: white;
+              border-radius: 20px;
+            "
+          />
+          <span
+            style="
+              position: absolute;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              color: white;
+            "
+            >🔍</span
+          >
+        </div>
+        <button
+          class="cart-icon"
+          style="
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            position: relative;
+            justify-content: space-between;
+          "
+        >
+           🛒
+          <span
+            class="cart-count"
+            style="
+              position: absolute;
+              top: -5px;
+              right: -5px;
+              background: red;
+              color: white;
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 12px;
+            "
+            >0</span
+          >
+        </button>
+      </div>
+    </div>
+       
+    <h1>Registrasi Pembayaran<h1>
+    <div class="form-container">
+        <form id="transferForm">
+            <div class="form-group">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Jumlah Transfer:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Metode Pembayaran:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="" disabled selected>Pilih Metode Pembayaran</option>
+                    <option value="bankTransfer">Transfer Bank</option>
+                    <option value="ewallet">E-Wallet</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-button">Kirim</button>
+            <script>
+        document
+          .querySelector(".beli-button")
+          .addEventListener("click", function () {
+            alert("Pembayaran anda sedang di proses!");
+          });
+      </script>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('transferForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const amount = document.getElementById('amount').value;
+            const paymentMethod = document.getElementById('paymentMethod').value;
+
+            alert(`Transfer berhasil!\nNama: ${name}\nEmail: ${email}\nJumlah: Rp ${amount}\nMetode Pembayaran: ${paymentMethod}`);
+            // Here you can add further processing, like sending the data to a server
+        });
+    </script>
+
+     <div
+      class="side-menu-overlay"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        display: none;
+      "
+    ></div>
+    <div
+      class="side-menu"
+      style="
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        background: #111;
+        border-left: 1px solid red;
+        z-index: 100;
+        transition: 0.3s;
+        padding: 20px;
+        display: none;
+      "
+    >
+      <button
+        class="close-menu"
+        style="
+          background: none;
+          border: none;
+          color: white;
+          font-size: 4px;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+        "
+      >
+        ✕
+      </button>
+      <h2 style="color: red; margin-top: 50px">Menu</h2>
+      <ul style="list-style: none; padding: 0">
+        <li style="padding: 10px 0">
+          <a href="beranda.html" style="color: white; text-decoration: none">Home</a>
+        </li>
+        <li style="padding: 10px 0">
+          <a href="beranda.html" style="color: white; text-decoration: none">Promo</a>
+        </li>
+        <li style="padding: 10px 0">
+          <a href="#" style="color: white; text-decoration: none"
+            >Status Pesanan</a
+          >
+        </li>
+        <li style="padding: 10px 0">
+          <button
+            class="logout-btn"
+            style="
+              background: red;
+              color: white;
+              border: none;
+              padding: 8px 15px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            <li style="padding: 10px 0">
+          <a href="index.html" style="color: white; text-decoration: none">Logout</a>
+        </li>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      // Toggle side menu
+      const menuToggle = document.querySelector(".menu-toggle");
+      const closeMenu = document.querySelector(".close-menu");
+      const sideMenu = document.querySelector(".side-menu");
+      const overlay = document.querySelector(".side-menu-overlay");
+
+      menuToggle.addEventListener("click", function () {
+        sideMenu.style.display = "block";
+        setTimeout(() => {
+          sideMenu.style.right = "0";
+          overlay.style.display = "block";
+        }, 10);
+      });
+
+      closeMenu.addEventListener("click", function () {
+        sideMenu.style.right = "-300px";
+        overlay.style.display = "none";
+        setTimeout(() => (sideMenu.style.display = "none"), 300);
+      });
+
+      overlay.addEventListener("click", function () {
+        sideMenu.style.right = "-300px";
+        overlay.style.display = "none";
+        setTimeout(() => (sideMenu.style.display = "none"), 300);
+      });
+
+      // Search functionality
+      document
+        .querySelector(".search-box input")
+        .addEventListener("keyup", function (e) {
+          if (e.key === "Enter") {
+            searchMenu(this.value);
+          }
+        });
+
+      function searchMenu(query) {
+        // Implementation for searching menu items
+        console.log("Searching for:", query);
+      }
+
+      // Shopping cart functionality
+      document
+        .querySelector(".cart-icon")
+        .addEventListener("click", function () {
+          // Show cart/checkout
+          alert("Keranjang belanja akan ditampilkan di sini");
+        });
+    </script>
+
+
+</body>
+</html>
